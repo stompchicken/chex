@@ -21,4 +21,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest -n "$(grep -c ^processor /proc/cpuinfo)" chex
+        pytest chex
