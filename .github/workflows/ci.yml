@@ -20,5 +20,5 @@ jobs:
         pip install .
     - name: Test with pytest
       run: |
-        pip install pytest
-        pytest chex
+        pip install pytest-xdist
+        pytest -n "$(grep -c ^processor /proc/cpuinfo)" chex
